@@ -1,0 +1,18 @@
+<configuration debug="true" scan="true"
+	scanPeriod="10 seconds">
+
+	<!-- SALIDA DE LOG -->
+	<appender name="consAp"
+		class="ch.qos.logback.core.ConsoleAppender">
+
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-4level %logger{32} - [%method] - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<!-- ROOT LOGGER -->
+	<root level="info">
+		<appender-ref ref="consAp" />
+	</root>
+
+</configuration>
